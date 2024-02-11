@@ -36,16 +36,18 @@ import astropy.units as u
 # TODO: mark the current sun phase.
 # TODO: mark the curren position of the moon.
 # TODO: show the current moon phase as icon.
-print(' ' + "1 9876-4321 1234+6789 12" + ' ')
-print(' ' + "           ▼            " + ' ')
-print(' ' + "    _,--._  _._.--.--.._" + ' ')
+print('┌' + "────────────────────────" + '┐')
+print('│' + "1 9876-4321 1234+6789 12" + '│')
+print('├' + "───────────▼────────────" + '┤')
+print('│' + "    _,--._  _._.--.--.._" + '│')
 print('▶' + "=.--'=_',-,▣`;_      .,'" + '◀')
-print(' ' + ",-.  _.)  (``-;_   .'   " + ' ')
-print(' ' + "   '-:_    `) ) v''=.   " + ' ')
-print(' ' + "     ) )    ()'    ='   " + ' ')
-print(' ' + "     |/            (_) =" + ' ')
-print(' ' + "           ▲            " + ' ')
-print(' ' + "   ☼            ●       " + ' ')
+print('│' + ",-.  _.)  (``-;_   .'   " + '│')
+print('│' + "   '-:_    `) ) v''=.   " + '│')
+print('│' + "     ) )    ()'    ='   " + '│')
+print('│' + "     |/            (_) =" + '│')
+print('├' + "───────────▲────────────" + '┤')
+print('│' + "   ☼            ●       " + '│')
+print('└' + "────────────────────────" + '┘')
 # TODO: print additional info:
 # TODO: - [ ] today's sunset time for marked location (lat and lon).
 # TODO: - [ ] today's sunrise time for marked location (lat and lon).
@@ -69,9 +71,10 @@ altazframe = AltAz(obstime=now, location=my_location) # the current location in 
 sunaltaz = get_sun(now).transform_to(altazframe) # get_sun --> the current location of the sun. transform_to --> ???
 orientation = sunaltaz.alt.value # NOTE 'sunaltaz.alt.value' is zero during sunrise.
 print(f"now utc:      {now}")
-print(f"latitude:     {lat}")
-print(f"longitude:    {lon}")
-print(f"sun position: {orientation}")
+
+#print(f"latitude:     {lat}")
+#print(f"longitude:    {lon}")
+#print(f"sun position: {orientation}")
 
 # approach #2 calculate using the astroplan package.
 hamburg = Observer(longitude=-9.994*u.deg, latitude=53.551*u.deg, elevation=27*u.m, name="Hamburg", timezone="Europe/Berlin")
