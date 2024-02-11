@@ -30,6 +30,28 @@ from astropy.units import Quantity
 from astroplan import Observer
 import astropy.units as u
 
+# source: https://vimhelp.org/digraph.txt.html
+# TODO: calculate longitude and latitude using the internet or something.
+# TODO: move the marker on the world map accourding to global position data.
+# TODO: mark the current sun phase.
+# TODO: mark the curren position of the moon.
+# TODO: show the current moon phase as icon.
+print(' ' + "1 9876-4321 1234+6789 12" + ' ')
+print(' ' + "           ▼            " + ' ')
+print(' ' + "    _,--._  _._.--.--.._" + ' ')
+print('▶' + "=.--'=_',-,▣`;_      .,'" + '◀')
+print(' ' + ",-.  _.)  (``-;_   .'   " + ' ')
+print(' ' + "   '-:_    `) ) v''=.   " + ' ')
+print(' ' + "     ) )    ()'    ='   " + ' ')
+print(' ' + "     |/            (_) =" + ' ')
+print(' ' + "           ▲            " + ' ')
+print(' ' + "   ☼            ●       " + ' ')
+# TODO: print additional info:
+# TODO: - [ ] today's sunset time for marked location (lat and lon).
+# TODO: - [ ] today's sunrise time for marked location (lat and lon).
+# TODO: - [ ] current utc time.
+# TODO: - [ ] current local time.
+
 # current time.
 import arrow
 utc = arrow.utcnow()
